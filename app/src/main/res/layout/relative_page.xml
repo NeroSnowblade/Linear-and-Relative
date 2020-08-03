@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="top|center"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="12pt"
+        android:padding="20pt"/>
+
+    <!--Full Name-->
+    <TextView
+        android:id="@+id/head_nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul"
+        android:text="Full Name"/>
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_nama"/>
+
+    <!--Alamat-->
+    <TextView
+        android:id="@+id/head_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nama"
+        android:paddingTop="10dp"
+        android:text="Address"/>
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_alamat"/>
+    <!--Alamat-->
+    <TextView
+        android:id="@+id/head_sekolah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alamat"
+        android:paddingTop="10dp"
+        android:text="High School"/>
+    <EditText
+        android:id="@+id/sekolah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_sekolah"/>
+
+    <!--Gambar-->
+    <ImageView
+        android:id="@+id/gambar_utama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sekolah"
+        android:src="@mipmap/ic_launcher"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sekolah"
+        android:src="@mipmap/ic_launcher"
+        android:padding="15dp"
+        android:layout_toLeftOf="@+id/gambar_utama"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sekolah"
+        android:src="@mipmap/ic_launcher"
+        android:padding="15dp"
+        android:layout_toRightOf="@+id/gambar_utama"/>
+
+    <!--Button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/gambar_utama">
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moveMain"
+            android:text="back"/>
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="next" />
+    </LinearLayout>
+</RelativeLayout>
